@@ -148,6 +148,7 @@
       controlIconsEnabled: true
 
     });
+/*
 //This is the beginning of the section about fixing play after drag problem
     var element = document.getElementById('canvas');
     var flag = 0;
@@ -169,6 +170,7 @@
     }, false);
   };
 //This is the end of the section about fixing play after drag problem
+*/
   document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
     for(var i = 0, len = audios.length; i < len;i++){
@@ -177,6 +179,7 @@
         }
     }
   }, true);
+
   </script>
 
   <audio id="HarmonyAudio" src="data\RunescapeMusic\Harmony.mp3"></audio>
