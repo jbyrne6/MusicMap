@@ -1,0 +1,1 @@
+make sure after you pan the audio doesnt play by accidental click onto a button
