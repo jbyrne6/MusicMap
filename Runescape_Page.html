@@ -129,6 +129,7 @@
       var audio = document.getElementById("BanditCampAudio");
     }
     if(audio.paused){
+      audio.load();
       audio.play();
     }else{
       audio.pause();
