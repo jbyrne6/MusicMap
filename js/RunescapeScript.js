@@ -12,7 +12,7 @@ function play(id){
     var audio = document.getElementById("PharaohsTombAudio");
   }else if (id == OverToNardah) {
     var audio = document.getElementById("OverToNardahAudio");
-  }else if(id == Scarab){
+  }else if (id == Scarab){
     var audio = document.getElementById("ScarabAudio");
   }else if (id == SunburnOne) {
     var audio = document.getElementById("SunburnOneAudio");
@@ -46,7 +46,84 @@ function play(id){
     var audio = document.getElementById("ShineAudio");
   }else if (id == BanditCamp) {
     var audio = document.getElementById("BanditCampAudio");
+  }else if (id == InTheBrine) {
+    var audio = document.getElementById("InTheBrineAudio");
+  }else if (id == DistantLand) {
+    var audio = document.getElementById("DistantLandAudio");
+  }else if (id == ShadowlandOne) {
+    var audio = document.getElementById("ShadowlandOneAudio");
+  }else if (id == ShadowlandTwo) {
+    var audio = document.getElementById("ShadowlandTwoAudio");
+  }else if (id == DanceOfTheUndead) {
+    var audio = document.getElementById("DanceOfTheUndeadAudio");
+  }else if (id == BoneDance) {
+    var audio = document.getElementById("BoneDanceAudio");
+  }else if (id == Stagnant) {
+    var audio = document.getElementById("StagnantAudio");
+  }else if (id == Natural) {
+    var audio = document.getElementById("NaturalAudio");
+  }else if (id == Venture) {
+    var audio = document.getElementById("VentureAudio");
+  }else if (id == StillNight) {
+    var audio = document.getElementById("StillNightAudio");
+  }else if (id == Expanse) {
+    var audio = document.getElementById("ExpanseAudio");
+  }else if (id == AutumnVoyage) {
+    var audio = document.getElementById("AutumnVoyageAudio");
+  }else if (id == Yesteryear) {
+    var audio = document.getElementById("YesteryearAudio");
+  }else if (id == Waterlogged) {
+    var audio = document.getElementById("WaterloggedAudio");
+  }else if (id == Deadlands) {
+    var audio = document.getElementById("DeadlandsAudio");
+  }else if (id == TheOtherSide) {
+    var audio = document.getElementById("TheOtherSideAudio");
+  }else if (id == DragontoothIsland) {
+    var audio = document.getElementById("DragontoothIslandAudio");
+  }else if (id == Shipwrecked) {
+    var audio = document.getElementById("ShipwreckedAudio");
+  }else if (id == FenkenstrainsRefrain) {
+    var audio = document.getElementById("FenkenstrainsRefrainAudio");
+  }else if (id == Village) {
+    var audio = document.getElementById("VillageAudio");
+  }else if (id == TheTerribleTower) {
+    var audio = document.getElementById("TheTerribleTowerAudio");
+  }else if (id == Morytania) {
+    var audio = document.getElementById("MorytaniaAudio");
+  }else if (id == DeadQuiet) {
+    var audio = document.getElementById("DeadQuietAudio");
+  }else if (id == Forbidden) {
+    var audio = document.getElementById("ForbiddenAudio");
+  }else if (id == Parade) {
+    var audio = document.getElementById("ParadeAudio");
+  }else if (id == Lullaby) {
+    var audio = document.getElementById("LullabyAudio");
+  }else if (id == Medieval) {
+    var audio = document.getElementById("MedievalAudio");
+  }else if (id == Adventure) {
+    var audio = document.getElementById("AdventureAudio");
+  }else if (id == Garden) {
+    var audio = document.getElementById("GardenAudio");
+  }else if (id == CrystalSword) {
+    var audio = document.getElementById("CrystalSwordAudio");
+  }else if (id == Underground) {
+    var audio = document.getElementById("UndergroundAudio");
+  }else if (id == Dark) {
+    var audio = document.getElementById("DarkAudio");
+  }else if (id == Witching) {
+    var audio = document.getElementById("WitchingAudio");
+  }else if (id == Dangerous) {
+    var audio = document.getElementById("DangerousAudio");
+  }else if (id == ScapeSad) {
+    var audio = document.getElementById("ScapeSadAudio");
+  }else if (id == EverlastingFire) {
+    var audio = document.getElementById("EverlastingFireAudio");
+  }else if (id == Regal) {
+    var audio = document.getElementById("RegalAudio");
+  }else if (id == Faithless) {
+    var audio = document.getElementById("FaithlessAudio");
   }
+
   if(audio.paused){
     audio.load();
     audio.play();
@@ -55,10 +132,6 @@ function play(id){
     audio.currentTime = 0;
   }
 }
-
-// Check if the mouse is draggin
-
-
 
 // Don't use window.onLoad like this in production, because it can only listen to one function.
 window.onload = function() {
@@ -69,29 +142,7 @@ window.onload = function() {
 
   });
 };
-/*
-//This is the beginning of the section about fixing play after drag problem
-  var element = document.getElementById('canvas');
-  var flag = 0;
 
-  element.addEventListener("mousedown", function() {
-      flag = 0;
-  }, false);
-
-  element.addEventListener("mousemove", function() {
-      flag = 1;
-  }, false);
-
-  element.addEventListener("mouseup", function() {
-      if (flag === 0) {
-          console.log( "Click" )
-      } else if (flag === 1) {
-          console.log( "Drag" );
-      }
-  }, false);
-};
-//This is the end of the section about fixing play after drag problem
-*/
 document.addEventListener('play', function(e){
   var audios = document.getElementsByTagName('audio');
   for(var i = 0, len = audios.length; i < len;i++){
