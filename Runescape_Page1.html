@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Game Music Maps</title>
+  <script src="js/svg-pan-zoom-master/dist/svg-pan-zoom.js"></script>
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding:0;
+      background-image: url("img/main_background_blue.png")
+    }
+    svg{
+      position:fixed;
+      top:0;
+      bottom:0;
+      height:100%;
+      left:0;
+      right:0;
+      width:100%;
+    }
+    #Harmony,
+    #NewbieMelody,
+    #CityOfTheDead,
+    #Sphinx,
+    #PharaohsTomb,
+    #OverToNardah,
+    #Scarab,
+    #SunburnOne,
+    #SunburnTwo,
+    #Dynasty,
+    #DesertHeat,
+    #DesertVoyage,
+    #TheDesert,
+    #TheGolem,
+    #Egypt,
+    #ArabianThree,
+    #ArabianOneOne,
+    #AlKharid,
+    #DuelArena,
+    #ArabianOneTwo,
+    #Shine,
+    #BanditCamp,
+    #ArabianTwo{
+      transition: .5s ease;
+      opacity: 0;
+      cursor:pointer;
+      pointer-events:all;
+    }
+    #Harmony:hover,
+    #NewbieMelody:hover,
+    #CityOfTheDead:hover,
+    #Sphinx:hover,
+    #PharaohsTomb:hover,
+    #OverToNardah:hover,
+    #Scarab:hover,
+    #SunburnOne:hover,
+    #SunburnTwo:hover,
+    #Dynasty:hover,
+    #DesertHeat:hover,
+    #DesertVoyage:hover,
+    #TheDesert:hover,
+    #TheGolem:hover,
+    #Egypt:hover,
+    #ArabianThree:hover,
+    #ArabianOneOne:hover,
+    #AlKharid:hover,
+    #DuelArena:hover,
+    #ArabianOneTwo:hover,
+    #Shine:hover,
+    #BanditCamp:hover,
+    #ArabianTwo:hover{
+      fill: grey!important;
+      opacity: .5;
+    }
+  </style>
+</head>
+<body>
+  <img src="RunescapeMaps/RunescapeOutlineMap.svg">
+  <script>
+  var id;
+  function play(id){
+    if(id == Harmony){
+      var audio = document.getElementById("HarmonyAudio");
+    }else if (id == NewbieMelody) {
+      var audio = document.getElementById("NewbieMelodyAudio");
+    }else if (id == CityOfTheDead) {
+      var audio = document.getElementById("CityOfTheDeadAudio");
+    }else if (id == Sphinx) {
+      var audio = document.getElementById("SphinxAudio");
+    }else if (id == PharaohsTomb) {
+      var audio = document.getElementById("PharaohsTombAudio");
+    }else if (id == OverToNardah) {
+      var audio = document.getElementById("OverToNardahAudio");
+    }else if(id == Scarab){
+      var audio = document.getElementById("ScarabAudio");
+    }else if (id == SunburnOne) {
+      var audio = document.getElementById("SunburnOneAudio");
+    }else if (id == SunburnTwo) {
+      var audio = document.getElementById("SunburnTwoAudio");
+    }else if (id == Dynasty) {
+      var audio = document.getElementById("DynastyAudio");
+    }else if (id == DesertHeat) {
+      var audio = document.getElementById("DesertHeatAudio");
+    }else if (id == DesertVoyage) {
+      var audio = document.getElementById("DesertVoyageAudio");
+    }else if (id == TheDesert) {
+      var audio = document.getElementById("TheDesertAudio");
+    }else if (id == TheGolem) {
+      var audio = document.getElementById("TheGolemAudio");
+    }else if (id == Egypt) {
+      var audio = document.getElementById("EgyptAudio");
+    }else if (id == ArabianThree) {
+      var audio = document.getElementById("ArabianThreeAudio");
+    }else if (id == ArabianOneOne) {
+      var audio = document.getElementById("ArabianOneOneAudio");
+    }else if (id == AlKharid) {
+      var audio = document.getElementById("AlKharidAudio");
+    }else if (id == DuelArena) {
+      var audio = document.getElementById("DuelArenaAudio");
+    }else if (id == ArabianOneTwo) {
+      var audio = document.getElementById("ArabianOneTwoAudio");
+    }else if (id == ArabianTwo) {
+      var audio = document.getElementById("ArabianTwoAudio");
+    }else if (id == Shine) {
+      var audio = document.getElementById("ShineAudio");
+    }else if (id == BanditCamp) {
+      var audio = document.getElementById("BanditCampAudio");
+    }
+    if(audio.paused){
+      audio.load();
+      audio.play();
+    }else{
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+
+// Check if the mouse is draggin
+
+
+
+  // Don't use window.onLoad like this in production, because it can only listen to one function.
+  window.onload = function() {
+    svgPanZoom('#RunescapeMap', {
+      zoomEnabled: true,
+      dblClickZoomEnabled: false,
+      controlIconsEnabled: true
+
+    });
+  };
+/*
+//This is the beginning of the section about fixing play after drag problem
+    var element = document.getElementById('canvas');
+    var flag = 0;
+
+    element.addEventListener("mousedown", function() {
+        flag = 0;
+    }, false);
+
+    element.addEventListener("mousemove", function() {
+        flag = 1;
+    }, false);
+
+    element.addEventListener("mouseup", function() {
+        if (flag === 0) {
+            console.log( "Click" )
+        } else if (flag === 1) {
+            console.log( "Drag" );
+        }
+    }, false);
+  };
+//This is the end of the section about fixing play after drag problem
+*/
+  document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+  }, true);
+  </script>
+
+  <audio id="HarmonyAudio" src="data\RunescapeMusic\Harmony.mp3"></audio>
+  <audio id="NewbieMelodyAudio" src="data\RunescapeMusic\NewbieMelody.mp3"></audio>
+  <audio id="CityOfTheDeadAudio" src="data\RunescapeMusic\CityOfTheDead.mp3"></audio>
+  <audio id="SphinxAudio" src="data\RunescapeMusic\Sphinx.mp3"></audio>
+  <audio id="PharaohsTombAudio" src="data\RunescapeMusic\PharaohsTomb.mp3"></audio>
+  <audio id="OverToNardahAudio" src="data\RunescapeMusic\OverToNardah.mp3"></audio>
+  <audio id="ScarabAudio" src="data\RunescapeMusic\Scarab.mp3"></audio>
+  <audio id="SunburnOneAudio" src="data\RunescapeMusic\SunburnOne.mp3"></audio>
+  <audio id="SunburnTwoAudio" src="data\RunescapeMusic\SunburnTwo.mp3"></audio>
+  <audio id="DynastyAudio" src="data\RunescapeMusic\Dynasty.mp3"></audio>
+  <audio id="DesertHeatAudio" src="data\RunescapeMusic\DesertHeat.mp3"></audio>
+  <audio id="DesertVoyageAudio" src="data\RunescapeMusic\DesertVoyage.mp3"></audio>
+  <audio id="TheDesertAudio" src="data\RunescapeMusic\TheDesert.mp3"></audio>
+  <audio id="TheGolemAudio" src="data\RunescapeMusic\TheGolem.mp3"></audio>
+  <audio id="EgyptAudio" src="data\RunescapeMusic\Egypt.mp3"></audio>
+  <audio id="ArabianThreeAudio" src="data\RunescapeMusic\ArabianThree.mp3"></audio>
+  <audio id="ArabianOneOneAudio" src="data\RunescapeMusic\ArabianOneOne.mp3"></audio>
+  <audio id="AlKharidAudio" src="data\RunescapeMusic\AlKharid.mp3"></audio>
+  <audio id="DuelArenaAudio" src="data\RunescapeMusic\DuelArena.mp3"></audio>
+  <audio id="ArabianOneTwoAudio" src="data\RunescapeMusic\ArabianOneTwo.mp3"></audio>
+  <audio id="ArabianTwoAudio" src="data\RunescapeMusic\ArabianTwo.mp3"></audio>
+  <audio id="ShineAudio" src="data\RunescapeMusic\Shine.mp3"></audio>
+  <audio id="BanditCampAudio" src="data\RunescapeMusic\BanditCamp.mp3"></audio>
+
+  <svg width="947.21mm" height="792.16mm" version="1.1" viewBox="0 0 947.21 792.16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="RunescapeMap">
+   <g transform="translate(0 495.16)">
+     <image id="RunescapeMap" y="-495.16" width="947.21" height="792.16" stroke="#000000" preserveAspectRatio="none" xlink:href="" />
+    <g fill="none" stroke="#000" stroke-width=".26458px">
+     <path onclick=play(NewbieMelody) id="NewbieMelody" d="m473.84-20.814c2.7e-4 22.624 0 67.767 0 67.767l68.394-0.10459 0.10458-33.674 33.256-0.20915-0.20915-33.779z"/>
+     <path onclick=play(Harmony) id="Harmony" d="m575.37-88.466 0.1487 33.386h33.981l-0.22307-33.535-14.311 0.06277z"/>
+     <path onclick=play(CityOfTheDead) id="CityOfTheDead" d="m575.33 115.28 33.895-0.098 0.19592 33.307 33.993 0.098-0.19592 34.679-67.692 0.098z"/>
+     <path onclick=play(Sphinx) id="Sphinx" d="m609.23 115.18 33.895-0.0979 0.29389 33.503-33.993-0.098z"/>
+     <path onclick=play(PharaohsTomb) id="PharaohsTomb" d="m643.12 115.08 33.993 0.19589v33.405l-33.699-0.0979z"/>
+     <path onclick=play(OverToNardah) id="OverToNardah" d="m677.12 115.28 34.948 0.11055 0.0458-34.655h-35.022l0.0223 27.277z"/>
+     <path onclick=play(Scarab) id="Scarab" d="m643.12 115.08 0.11406-34.327-101.18 0.14848v34.593z"/>
+     <path onclick=play(SunburnOne) id="SunburnOne" d="m677.09 80.735 0.0283 34.545-33.993-0.19589 0.11406-34.327z"/>
+     <path onclick=play(SunburnTwo) id="SunburnTwo" d="m609.41 80.707-0.0915-33.8-33.846-0.09147 0.0915 33.8z"/>
+     <path onclick=play(Dynasty) id="Dynasty" d="m677.09 80.735-0.0785-33.92-33.754-0.04575-0.0177 33.987z"/>
+     <path onclick=play(DesertHeat) id="DesertHeat" d="m712.11 80.735-0.0806-67.757-34.993-0.12938 0.0523 67.887z"/>
+     <path onclick=play(DesertVoyage) id="DesertVoyage" d="m677.03 12.848h-67.723l0.0964 67.858 33.828 0.05003 0.0177-33.987 33.754 0.04575z"/>
+     <path onclick=play(TheDesert) id="TheDesert" d="m609.31 12.848-66.968 0.32578-0.10458 33.674 67.078 0.05808z"/>
+     <path onclick=play(TheGolem) id="TheGolem" d="m745.25-30.299 0.27442 43.451-68.489-0.30372-0.0262-33.634 34.852-0.36589 0.0915-9.239z"/>
+     <path onclick=play(Egypt) id="Egypt" d="m677.01-20.785-67.697-0.0026v33.635h67.723z"/>
+     <path onclick=play(ArabianThree) id="ArabianThree" d="m575.39-20.814 33.922 0.02593v33.635l-33.712 0.11782z"/>
+     <path onclick=play(ArabianOneOne) id="ArabianOneOne" d="m677.1-55.133h34.799l-0.0381 33.982-34.852 0.36589z"/>
+     <path onclick=play(AlKharid) id="AlKharid" d="m677.1-55.133-67.596 0.05313-0.19174 34.292 67.697 0.0026z"/>
+     <path onclick=play(ArabianTwo) id="ArabianTwo" d="m609.27-122.37 33.937 0.0457 0.0915 33.617-34.019 0.09054-3e-3 -9.5561z"/>
+     <path onclick=play(DuelArena) id="DuelArena" d="m643.3-88.706 0.0431 33.619 48.496-0.11263-0.0563-33.344z"/>
+     <path onclick=play(Shine) id="Shine" d="m643.21-122.32 33.992-0.0733 0.11252 33.646-34.013 0.04424z"/>
+     <path onclick=play(BanditCamp) id="BanditCamp" d="m542.24 46.848 33.232-0.03339 0.0915 33.8-33.507 0.29001z"/>
+     <path onclick=play(ArabianOneTwo) id="ArabianOneTwo" d="m609.28-88.615 34.019-0.09059 0.0431 33.619-33.839 0.0069z"/>
+    </g>
+   </g>
+  </svg>
+
+
+</body>
+</html>
