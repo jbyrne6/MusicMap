@@ -1,1 +1,7 @@
-make sure after you pan the audio doesnt play by accidental click onto a button
+1. Make Runescape music load faster
+2. Make svg full screen
+3. Highlight audio that is playing
+4. Make sure after you pan the audio doesnt play by accidental click onto a button
+5. Make zoom controls stay on bottom left relative to screen scaling
+6. Make svg full screen
+7. Put svg xml data in different file

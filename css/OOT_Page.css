@@ -1,6 +1,39 @@
-.play_pause_button {
-    position: relative;
-    transition: .5s ease;
-    top: 50%;
-    left: 50%;
+body, html {
+  height: 100%;
+  margin: 0;
+  padding:0;
+  background-image: url("../img/main_background_blue.png")
+}
+svg{
+  position:fixed;
+  top:0;
+  bottom:0;
+  height:100%;
+  left:0;
+  right:0;
+  width:100%;
+  z-index: 1;
+}
+#HyruleField, #Market, #TempleOfTime, #HyruleCastle, #GerudoValley, #DekuTree, #LonLonRanch, #KokiriForest, #KakarikoVillage, #WindmillHut, #ZorasDomain, #GoronCity, #LostWoods, #TitleTheme{
+  transition: .5s ease;
+  opacity: 0;
+  cursor:pointer;
+  pointer-events:all;
+}
+#HyruleField:hover, #Market:hover, #TempleOfTime:hover, #HyruleCastle:hover, #GerudoValley:hover, #DekuTree:hover, #LonLonRanch:hover, #KokiriForest:hover, #KakarikoVillage:hover, #WindmillHut:hover, #ZorasDomain:hover, #GoronCity:hover, #LostWoods:hover, #TitleTheme:hover{
+  fill: grey!important;
+  opacity: .5;
+}
+
+#lars{
+  width: 1000px:
+  height: 500px;
+  bottom: 0;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+}
+#tony{
+  width: 1000px:
+  height: 500px;
 }
