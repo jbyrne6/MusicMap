@@ -5,3 +5,5 @@
 5. Make zoom controls stay on bottom left relative to screen scaling
 6. Make svg full screen
 7. Put svg xml data in different file
+
+https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js
