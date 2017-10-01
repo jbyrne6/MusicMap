@@ -1,25 +1,69 @@
-/*img { height:100%; width:auto; }
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%; /* full window width */
-    text-align: center;
+body, html {
+  height: 100%;
+  margin: 0;
+  padding:0;
+  background-image: url("../img/main_background_blue.png")
 }
-#wrapper {
-    width: 95%; /* of body width */
+svg{
+  position:fixed;
+  top:0;
+  bottom:0;
+  height:100%;
+  left:0;
+  right:0;
+  width:100%;
 }
-#wrapper>div {
-    display: inline-block;
-    width: 32%; /* of wrapper width */
-    margin: auto;
-    text-align: left;
+#Harmony,
+#NewbieMelody,
+#CityOfTheDead,
+#Sphinx,
+#PharaohsTomb,
+#OverToNardah,
+#Scarab,
+#SunburnOne,
+#SunburnTwo,
+#Dynasty,
+#DesertHeat,
+#DesertVoyage,
+#TheDesert,
+#TheGolem,
+#Egypt,
+#ArabianThree,
+#ArabianOneOne,
+#AlKharid,
+#DuelArena,
+#ArabianOneTwo,
+#Shine,
+#BanditCamp,
+#ArabianTwo{
+  transition: .5s ease;
+  opacity: 0;
+  cursor:pointer;
+  pointer-events:all;
 }
-/* alternately */
-/*
-#wrapper>div {
-    float: left;
-    width: 31%; /* of wrapper width */
-    margin: 0 1%;
-    text-align: left;
+#Harmony:hover,
+#NewbieMelody:hover,
+#CityOfTheDead:hover,
+#Sphinx:hover,
+#PharaohsTomb:hover,
+#OverToNardah:hover,
+#Scarab:hover,
+#SunburnOne:hover,
+#SunburnTwo:hover,
+#Dynasty:hover,
+#DesertHeat:hover,
+#DesertVoyage:hover,
+#TheDesert:hover,
+#TheGolem:hover,
+#Egypt:hover,
+#ArabianThree:hover,
+#ArabianOneOne:hover,
+#AlKharid:hover,
+#DuelArena:hover,
+#ArabianOneTwo:hover,
+#Shine:hover,
+#BanditCamp:hover,
+#ArabianTwo:hover{
+  fill: grey!important;
+  opacity: .5;
 }
-*/
